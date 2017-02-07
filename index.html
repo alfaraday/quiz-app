@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Steven Universe Quiz App</title>
-
+	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
@@ -14,27 +14,16 @@
 
 <div class="quiz-page hidden">
 	<header class="qp-header">Steven Universe Quiz</header>
-	<p class="status">You're current score is: <span id="current-score"></span></p>
+	<p class="status">Your current score is: <span id="current-score"></span></p>
 	<form id="q1">
-		<label class="q-num">Question 1 of 5</label>
-		<p class="question">Qustion here</p>
-		<div class="answers">
-			<input type="radio" name="q1" id="1a" value="0"><label for="1a">Answer</label><br>
-			<input type="radio" name="q1" id="1b" value="1"><label for="1b">Answer</label><br>
-			<input type="radio" name="q1" id="1c" value="2"><label for="1c">Answer</label><br>
-			<input type="radio" name="q1" id="1d" value="3"><label for="1d">Answer</label><br>
-		</div>
-		<p class="correct feedback ">Correct!</p>
-		<p class="incorrect feedback ">Wrong! The correct answer is...</p>
-		<button type="button" class="next">Next</button>
 	</form>
 </div>
 
 <div class="result-page hidden">
 	<header class="rp-header">Steven Universe Quiz</header>
 	<div class="r-container">
-		<p>Score</p>
-		<p>Blurb about score</p>
+		<p>Your score is <span id="final-score"></span></p>
+		<p class="blurb hidden">Blurb about score</p>
 		<button type="button" class="restart">Restart</button>
 	</div>
 

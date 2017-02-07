@@ -64,7 +64,7 @@ form {
 	margin-left: auto;
 }
 
-.next {
+.next, .submit {
 	margin-top: 7px;
 	width: 60px;
 	height: 35px;
