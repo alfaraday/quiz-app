@@ -49,6 +49,7 @@ function renderHTML(content, x){
 			'<input type="radio" name="q" id="d" value="'+content[x].choices[3]+'" required><label for="d">'+content[x].choices[3]+'</label><br>'+
 		'</div>'+
 		'<button type="submit" class="submit">Submit</button>'+
+		'<p class="noanswer feedback hidden">You need to guess an answer first!</p>'+
 		'<p class="correct feedback hidden">Correct!</p>'+
 		'<p class="incorrect feedback hidden">Wrong! The correct answer is: '+content[x].answer+'</p>'+
 		'<button type="button" class="next hidden">Next</button>'
@@ -65,17 +66,22 @@ $('.title-page').on('click', 'button.start', function(event){
 //Submit answer
 $('.quiz-page').on('click', 'button.submit', function(event){
 	event.preventDefault();
-	$('.submit').addClass('hidden');
-	if (($('input[name=q]:checked', '#q1').val()) == content[qNum].answer) {
-		score += 1;
-		$('.correct').removeClass('hidden');
+	if($('input[name=q]:checked').length<=0) {
+		$('.noanswer').removeClass('hidden');
 	}
-	else {
-		$('.incorrect').removeClass('hidden');
-	}
-	$('.next').removeClass('hidden');
-	$('#current-score').html(score +'/'+content.length);
-	qNum += 1;
+	else
+	{$('.submit').addClass('hidden');
+		$('.noanswer').addClass('hidden');
+		if (($('input[name=q]:checked', '#q1').val()) == content[qNum].answer) {
+			score += 1;
+			$('.correct').removeClass('hidden');
+		}
+		else {
+			$('.incorrect').removeClass('hidden');
+		}
+		$('.next').removeClass('hidden');
+		$('#current-score').html(score +'/'+content.length);
+		qNum += 1;}
 });
 
 //Display next question or results
@@ -97,7 +103,9 @@ $('.result-page').on('click', 'button.restart', function(event) {
 	score = 0;
 	qNum = 0;
 	$('.result-page').addClass('hidden');
-	$('.title-page').removeClass('hidden');
+	$('form#q1').html(renderHTML(content, qNum));
+	$('#current-score').html(score +'/'+content.length);
+	$('.quiz-page').removeClass('hidden');
 });
 
 

@@ -1,6 +1,7 @@
 body {
 	background-color: #cccccc;
 	box-sizing: border-box;
+	font-family: 'Varela Round', sans-serif;
 }
 
 .title-page, .result-page {
