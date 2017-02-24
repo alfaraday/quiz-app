@@ -11,7 +11,7 @@ var content = [
 {question: 'Before Steven freed her, Lapis Lazuli was trapped for thousands of years in a:',
 choices: ['Tower', 'Book', 'Mirror', 'Cave'],
 answer: 'Mirror',
-class: 'lapis-lazuli'
+class: 'lapis'
 },
 {question: 'What is Smoky Quartz’s weapon?',
 choices: ['A yo-yo', 'A cannon', 'A war hammer', 'A sling-shot'],
@@ -54,6 +54,7 @@ function renderHTML(content, x){
 		'<p class="incorrect feedback hidden">Wrong! The correct answer is: '+content[x].answer+'</p>'+
 		'<button type="button" class="next hidden">Next</button>'
 };
+
 
 //Display first question
 $('.title-page').on('click', 'button.start', function(event){

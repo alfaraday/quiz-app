@@ -4,23 +4,73 @@ body {
 	font-family: 'Varela Round', sans-serif;
 }
 
-.title-page, .result-page {
-	background-color: #eeeeee;
+body.title-background {
+	background-image: url("images/title-page.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.lapis {
+	background-image: url("images/lapis.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.smoky-quartz {
+	background-image: url("images/smoky-quartz.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.result-page {
+	background-color: #FFFFEA;
+	color: #8B1B4D;
 	width: 400px;
 	padding: 40px;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 150px;
+	margin-top: 220px;
 	border-radius: 20px;
 }
 
-.tp-header, .qp-header, .rp-header {
+.title-page {
+	background-color: rgba(255,255,234, 0.6);
+	color: #8B1B4D;
+	width: 400px;
+	padding: 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 220px;
+	border-radius: 20px;
+}
+
+.start {
+	background-color: #F09A4B;
+	border: none;
+	color: #8B1B4D;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	width: 200px;
+	height: 50px;
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+.tp-header {
+	text-align: center;
+	font-size: 40px;
+}
+
+.qp-header, .rp-header {
 	text-align: center;
 	font-size: 20px;
 }
 
-.start, .restart {
+.restart {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
