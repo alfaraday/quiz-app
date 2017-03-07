@@ -48,11 +48,11 @@ function renderHTML(content, x){
 			'<input type="radio" name="q" id="c" value="'+content[x].choices[2]+'" required><label for="c">'+content[x].choices[2]+'</label><br>'+
 			'<input type="radio" name="q" id="d" value="'+content[x].choices[3]+'" required><label for="d">'+content[x].choices[3]+'</label><br>'+
 		'</div>'+
-		'<button type="submit" class="submit">Submit</button>'+
+		'<button type="submit" class="submit '+content[x].class+'">Submit</button>'+
 		'<p class="noanswer feedback hidden">You need to guess an answer first!</p>'+
 		'<p class="correct feedback hidden">Correct!</p>'+
 		'<p class="incorrect feedback hidden">Wrong! The correct answer is: '+content[x].answer+'</p>'+
-		'<button type="button" class="next hidden">Next</button>'
+		'<button type="button" class="next hidden '+content[x].class+'">Next</button>'
 };
 
 
@@ -61,6 +61,10 @@ $('.title-page').on('click', 'button.start', function(event){
 	event.preventDefault();
 	$('.title-page').addClass('hidden');
 	$('form#q1').html(renderHTML(content, qNum));
+	$('body').removeClass().addClass(content[qNum].class+'-background');
+	$('form').addClass(content[qNum].class);
+	$('.qp-header').addClass(content[qNum].class);
+	$('.status').addClass(content[qNum].class);
 	$('.quiz-page').removeClass('hidden');
 });
 
@@ -90,11 +94,19 @@ $('.quiz-page').on('click', 'button.next', function(event){
 	event.preventDefault();
 	if (qNum < content.length) {
 		$('form#q1').html(renderHTML(content, qNum));
+		$('body').removeClass().addClass(content[qNum].class+'-background');
+		$('form').removeClass().addClass(content[qNum].class);
+		$('.qp-header').removeClass(content[qNum-1].class).addClass(content[qNum].class);
+		$('.status').removeClass(content[qNum-1].class).addClass(content[qNum].class);
 	}
 	else {
 		$('.quiz-page').addClass('hidden');
-		$('#final-score').html(score +'/'+content.length);
+		$('#final-score').html(score +' out of '+content.length);
+		$('body').removeClass().addClass('result-page-background');
 		$('.result-page').removeClass('hidden');
+		$('.qp-header').removeClass(content[qNum-1].class);
+		$('.status').removeClass(content[qNum-1].class);
+		$('form').removeClass();
 	}
 });
 
@@ -106,6 +118,11 @@ $('.result-page').on('click', 'button.restart', function(event) {
 	$('.result-page').addClass('hidden');
 	$('form#q1').html(renderHTML(content, qNum));
 	$('#current-score').html(score +'/'+content.length);
+	$('.quiz-page').removeClass('hidden');
+	$('body').removeClass().addClass(content[qNum].class+'-background');
+	$('form').addClass(content[qNum].class);
+	$('.qp-header').addClass(content[qNum].class);
+	$('.status').addClass(content[qNum].class);
 	$('.quiz-page').removeClass('hidden');
 });
 
