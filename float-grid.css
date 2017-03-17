@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+}
+
+.row {
+	max-width: 1000px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+	display: table;
+	content: '';
+}
+
+.row::after {
+	clear: both;
+}
+
+.card {
+	float: left;
+	padding-left: 5px;
+  	padding-right: 5px;
+  	margin-right: 5px;
+}
+
+/* Mobile defaults */
+body.title-background {
+	background-image: url("mobile-images/title-page.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+body.lapis-background {
+	background-image: url("mobile-images/lapis.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.smoky-quartz-background {
+	background-image: url("mobile-images/smoky-quartz.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.peridot-background {
+	background-image: url("mobile-images/peridot.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.greg-background {
+	background-image: url("mobile-images/greg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.steven-background {
+	background-image: url("mobile-images/steven.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.garnet-background {
+	background-image: url("mobile-images/garnet.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.result-page-background {
+	background-image: url("mobile-images/results-page.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Non-mobile */
+@media only screen and (min-width: 640px) {
+	body.title-background {
+	background-image: url("images/title-page.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.lapis-background {
+	background-image: url("images/lapis.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.smoky-quartz-background {
+	background-image: url("images/smoky-quartz.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.peridot-background {
+	background-image: url("images/peridot.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.greg-background {
+	background-image: url("images/greg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.steven-background {
+	background-image: url("images/steven.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.garnet-background {
+	background-image: url("images/garnet.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.result-page-background {
+	background-image: url("images/results-page.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+}

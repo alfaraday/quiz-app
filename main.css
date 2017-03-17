@@ -4,7 +4,7 @@ body {
 	font-family: 'Varela Round', sans-serif;
 }
 
-body.title-background {
+/*body.title-background {
 	background-image: url("images/title-page.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -50,7 +50,7 @@ body.result-page-background {
 	background-image: url("images/results-page.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-}
+}*/
 
 .result-page {
 	background-color: rgba(255, 255, 255, 0.8);

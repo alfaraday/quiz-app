@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
 	<title>Steven Universe Quiz App</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="float-grid.css">
 </head>
 <body class="title-background">
 
-<div class="title-page ">
+<div class="title-page row">
 	<header class="tp-header">Steven Universe Quiz</header>
 	<button type="button" class="start">Start</button>
 </div>
 
-<div class="quiz-page hidden">
+<div class="quiz-page hidden row">
 	<header class="qp-header">Steven Universe Quiz</header>
 	<p class="status">Your current score is: <span id="current-score"></span></p>
 	<form id="q1">
 	</form>
 </div>
 
-<div class="result-page hidden">
+<div class="result-page hidden row">
 	<header class="rp-header">Steven Universe Quiz</header>
 	<div class="r-container">
 		<p>Your score is <span id="final-score"></span></p>
